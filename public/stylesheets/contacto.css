@@ -1,0 +1,257 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*      Header      */
+
+.menu {
+  height: 75px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.menu-items {
+  display: flex;
+  margin-right: 30px;
+  font-size: 16px;
+}
+
+.subMenu-items {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding-top: 21px;
+  border-radius: 3px;
+  text-align: left;
+  z-index: 10;
+}
+
+.menu-items li:hover > ul {
+  display: block;
+}
+
+.margin-rigth {
+  margin-right: 10px;
+}
+
+.menu-items li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 7px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.subMenu-items li a {
+  padding: 5px 5px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.menu-items li:hover, li.active {
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 2px;
+  transition: .4s;
+}
+
+.nav-logo {
+  margin: 0 40px;
+  width: 150px;
+}
+
+.menu-btn {
+  margin-right: 30px;
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+  display: none;
+}
+
+ul.show {
+  top: 49px;
+  z-index: 10;
+}
+
+@media (max-width: 952px){
+  .menu-items li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .menu-btn {
+    display: inline-flex;
+  }
+  .menu-items {
+    position: absolute;
+    width: 100vw;
+    height: calc(100% - 65px);
+    background: #414141;
+    top: -100vh;
+    text-align: center;
+    transition: all .4s;
+    flex-direction: column;
+    z-index: 900;
+  }
+  .menu-items li {
+    margin: 15px 0 0 0;
+    line-height: 30px;
+  }
+  .menu-items li:hover {
+    background: none;
+  }
+  .menu-items li a {
+    font-size: 20px;
+    color: #fff;
+  }
+  .menu-items li a:hover {
+    color: cornflowerblue;
+  }
+  .menu {
+    height: 50px;
+  }
+  .nav-logo {
+    margin-left: 15px;
+    padding-top: 5px;
+    width: 115px;
+  }
+  .menu-items li:hover > ul {
+  display: none;
+  }
+}
+
+@media (max-width: 885px) and (orientation: landscape){
+  .menu-items li {
+    margin: 15px 0 0 0;
+  }
+  .menu-items {
+    overflow: scroll;
+    height: calc(100% - 65px);
+  }
+}
+
+/*      Form      */
+
+.contacto-container {
+  height: 575px;
+}
+
+.contacto-background {
+  background-image: url(../images/contacto.png);
+  background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  position: relative;
+}
+
+.form {
+  width: 300px;
+  height: 460px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: white;
+}
+
+.title-box {
+  width: 227px;
+}
+
+.form-title {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  color: white;
+  text-transform: uppercase;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+  border-bottom: 2px solid rgb(233, 128, 8);
+}
+
+.barra {
+  width: 250px;
+  display: block;
+  margin-left: 30px;
+  margin-top: 10px;
+  color: white;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  font-size: 17px;
+}
+
+textarea {
+  resize: none;
+  width: 250px;
+  height: 120px;
+  margin-left: 30px;
+  background-color: transparent;
+  color: white;
+  border-bottom: 1px solid white;
+  font-size: 17px;
+}
+
+.boton {
+  width: 250px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 30px;
+  color: white;
+  background: none;
+  font-size: 17px;
+  border: 3px solid rgb(233, 128, 8);
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+  cursor: pointer;
+}
+
+.boton:hover {
+  transform: scale(1.1, 1.1);
+  transition: .4s;
+}
+
+@media (min-width: 550px) {
+  .barra {
+    width: 300px;
+    font-size: 19px;
+  }
+  textarea {
+    width: 300px;
+    font-size: 19px
+  }
+  .boton {
+    width: 300px;
+    font-size: 19px;
+    height: 35px;
+  }
+}
+
+/*      Footer      */
+
+.footer-container {
+  height: 100px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+.footer-title {
+    padding-top: 5px;
+}
+
+.copyrigth {
+  margin-top: 5px;
+  font-size: smaller;
+}
