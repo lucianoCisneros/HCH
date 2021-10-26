@@ -8,11 +8,15 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  background-color: #011553;
+}
+
 /*      Header      */
 
 .menu {
   height: 75px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,6 +55,10 @@
   font-weight: 600;
   cursor: pointer;
   z-index: 1000;
+}
+
+.menu-items li {
+  transition: .4s;
 }
 
 .subMenu-items li a {
@@ -141,19 +149,110 @@ ul.show {
   }
 }
 
+/*      Map      */
+
+.map-container {
+  height: 440px;
+}
+
+.map-title {
+  text-align: center;
+  margin-top: 35px;
+  color: #fff;
+}
+
+.map {
+    display: block;
+    height: 250px;
+    width: 250px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+.address {
+  color: #fff;
+}
+
+@media (min-width: 495px){
+  .map {
+    height: 300px;
+    width: 400px;
+  }
+  .map-container {
+    height: 490px;
+  }
+}
+
+.address {
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 680px){
+  .map {
+    height: 350px;
+    width: 450px;
+  }
+  .map-container {
+    height: 540px;
+  }
+}
+
+@media (min-width: 760px){
+  .map {
+    height: 400px;
+    width: 500px;
+  }
+  .map-container {
+    height: 590px;
+  }
+}
+
+@media (min-width: 1023px){
+  .map {
+    height: 450px;
+    width: 650px;
+  }
+  .map-container {
+    height: 650px;
+  }
+}
+
 /*      Footer      */
 
-.footer-container {
-  height: 100px;
-  text-align: center;
+footer {
   background-color: lightgray;
+  padding: 20px 0 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .footer-title {
-    padding-top: 5px;
+  margin-bottom: 20px;
+}
+
+.footer-img {
+  width: 30px;
+}
+
+.footer-ubi {
+  margin-top: 20px;
 }
 
 .copyrigth {
-  margin-top: 5px;
-  font-size: smaller;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 13px;
 }

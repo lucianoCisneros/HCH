@@ -12,7 +12,7 @@
 
 .menu {
   height: 75px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,6 +51,10 @@
   font-weight: 600;
   cursor: pointer;
   z-index: 1000;
+}
+
+.menu-items li {
+  transition: .4s;
 }
 
 .subMenu-items li a {
@@ -198,19 +202,48 @@ ul.show {
   }
 }
 
+@media (min-width: 1440px) {
+  .servicios-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
 /*      Footer      */
 
-.footer-container {
-  height: 100px;
-  text-align: center;
+footer {
   background-color: lightgray;
+  padding: 20px 0 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .footer-title {
-    padding-top: 5px;
+  margin-bottom: 20px;
+}
+
+.footer-img {
+  width: 30px;
+}
+
+.footer-ubi {
+  margin-top: 20px;
 }
 
 .copyrigth {
-  margin-top: 5px;
-  font-size: smaller;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 13px;
 }
